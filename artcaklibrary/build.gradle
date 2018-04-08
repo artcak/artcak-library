@@ -10,19 +10,22 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
     }
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
     dataBinding {
         enabled true
     }
-
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
     compileOptions {
         targetCompatibility 1.8
         sourceCompatibility 1.8
