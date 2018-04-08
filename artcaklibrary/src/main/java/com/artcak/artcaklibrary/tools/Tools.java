@@ -55,6 +55,7 @@ public class Tools {
         return (new Random()).nextInt((max - min) + 1) + min;
     }
     public void log(String stringMessage){
-        Log.i(Var.TAG,activity.getLocalClassName()+" "+stringMessage);
+        String methodName = new Object(){}.getClass().getEnclosingMethod().getName();
+        Log.i(Var.TAG,activity.getLocalClassName()+"->"+methodName+" "+stringMessage);
     }
 }
