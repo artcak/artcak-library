@@ -25,3 +25,15 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+ext {
+    // Sdk and tools
+    minSdkVersion = 15
+    targetSdkVersion = 27
+    compileSdkVersion = 27
+    gmsVersion = '12.0.1'
+    firebaseVersion = '12.0.1'
+
+    // App dependencies
+    supportLibraryVersion = '27.1.1'
+}
