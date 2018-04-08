@@ -14,7 +14,6 @@ import java.util.regex.Pattern;
 
 public class Tools {
     private Activity activity;
-
     public Tools(Activity activity){
         this.activity = activity;
     }
@@ -54,5 +53,8 @@ public class Tools {
 
     public static int getRandomNumber(int min,int max) {
         return (new Random()).nextInt((max - min) + 1) + min;
+    }
+    public void log(String stringMessage){
+        Log.i(Var.TAG,activity.getLocalClassName()+" "+stringMessage);
     }
 }

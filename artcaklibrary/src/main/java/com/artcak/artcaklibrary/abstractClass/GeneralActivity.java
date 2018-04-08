@@ -22,6 +22,7 @@ public class GeneralActivity extends AppCompatActivity {
 
     public void setBASE_API(String BASE_API) {
         this.BASE_API = BASE_API;
+        createRetrofit();
     }
 
     @Override
@@ -32,7 +33,6 @@ public class GeneralActivity extends AppCompatActivity {
         generalApi = retrofit.create(GeneralApi.class);
         tools = new Tools(this);
     }
-
 
     protected void createRetrofit() {
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
