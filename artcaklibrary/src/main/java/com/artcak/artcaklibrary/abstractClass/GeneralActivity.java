@@ -14,10 +14,15 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class GeneralActivity extends AppCompatActivity {
+    private String BASE_API = "http://139.59.237.73";
     protected Retrofit retrofit;
     protected Gson gson;
     protected Tools tools;
     protected GeneralApi generalApi;
+
+    public void setBASE_API(String BASE_API) {
+        this.BASE_API = BASE_API;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,12 +33,14 @@ public class GeneralActivity extends AppCompatActivity {
         tools = new Tools(this);
     }
 
+
     protected void createRetrofit() {
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
         logging.setLevel(HttpLoggingInterceptor.Level.BODY);
         OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
         httpClient.addInterceptor(logging);
         retrofit = new Retrofit.Builder()
+                .baseUrl(BASE_API)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(httpClient.build())
                 .build();
