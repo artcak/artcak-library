@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
-import com.artcak.artcaklibrary.date.TimeHelper;
+import com.artcak.artcaklibrary.tools.TimeHelper;
 
 public class MainActivity extends AppCompatActivity {
     TextView tv_formatedTime;
