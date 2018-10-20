@@ -16,8 +16,8 @@ public class TimeHelper {
     public static final String[] months_short = {"Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agu", "Sept", "Okt", "Nov", "Des"};
     public static final String FORMAT_ISO_DAY_TO_SECOND = "%1$tY-%1$tm-%1$td %1$tH:%1$tM:%1$tS";
     public static final String FORMAT_ISO_DAY_TO_YEAR = "%1$tY-%1$tm-%1$td";
-    public static final String FORMAT_DAY_TO_SECOND = "1$td %1$tB %1$tY %1$tH:%1$tM:%1$tS";
-    public static final String FORMAT_DAY_TO_YEAR = "1$td %1$tB %1$tY";
+    public static final String FORMAT_DAY_TO_SECOND = "%1$td %1$tB %1$tY %1$tH:%1$tM:%1$tS";
+    public static final String FORMAT_DAY_TO_YEAR = "%1$td %1$tB %1$tY";
     public static final String FORMAT_DAY_TO_SECOND_SHORTMONTH = "%1$td %1$tb %1$tY %1$tH:%1$tM:%1$tS";
     public static final String FORMAT_DAY_TO_YEAR_SHORTMONTH = "%1$td %1$tb %1$tY";
     public static long getTimeNow(){
